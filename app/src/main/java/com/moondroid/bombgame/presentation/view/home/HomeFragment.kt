@@ -29,6 +29,7 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
 
     private var clockSound: MediaPlayer? = null
     private var boomSound: MediaPlayer? = null
+    private val gameType = ArrayList<Int>()
 
     private val exitDialog: ExitDialog by lazy {
         ExitDialog(mContext, object : ExitDialog.EventListener {
@@ -41,7 +42,7 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
             }
 
             override fun onRetry() {
-                initView()
+                setGame()
             }
         })
     }
@@ -54,7 +55,10 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        init()
+    }
 
+    private fun init() {
         clockSound = MediaPlayer.create(mContext, R.raw.clock).apply {
             isLooping = true
         }
@@ -83,10 +87,15 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
             }
         }
 
-        initView()
+        if (Preferences.getGame01()) gameType.add(1)
+        if (Preferences.getGame02()) gameType.add(2)
+        if (Preferences.getGame03()) gameType.add(3)
+
+        setGame()
     }
 
-    private fun initView() {
+    private fun setGame() {
+        binding.type = gameType[Random.nextInt(gameType.lastIndex)]
         time = 0
         binding.status = GameStatus.COUNT
         binding.lottieCountDown.playAnimation()

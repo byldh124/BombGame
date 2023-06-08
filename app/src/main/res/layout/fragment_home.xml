@@ -4,6 +4,10 @@
     <data>
 
         <variable
+            name="type"
+            type="Integer" />
+
+        <variable
             name="status"
             type="com.moondroid.bombgame.presentation.view.home.HomeFragment.GameStatus" />
 
@@ -30,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="8dp"
                 android:fontFamily="@font/font_ex"
-                android:text="초성 퀴즈"
+                title="@{type}"
                 android:textColor="@color/blue_darK02"
                 android:textSize="24sp" />
 
@@ -40,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:fontFamily="@font/font_ex"
-                android:text="다음 초성으로 이루어진 단어를 말해보세요."
+                description="@{type}"
                 android:textColor="@color/blue_darK02"
                 android:textSize="16sp" />
 
@@ -49,7 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/font_ex"
-                android:text="ㄱㅁ"
+                quiz="@{type}"
                 android:textColor="@color/blue_darK02"
                 android:textSize="32sp" />
 
