@@ -21,6 +21,7 @@ import com.moondroid.bombgame.utils.Constants
 import com.moondroid.bombgame.utils.Extension.debug
 import com.moondroid.bombgame.utils.Extension.exitApp
 import com.moondroid.bombgame.utils.Extension.logException
+import com.moondroid.bombgame.utils.Extension.toast
 import com.moondroid.bombgame.utils.Extension.visible
 import retrofit2.Call
 import retrofit2.Callback
@@ -28,13 +29,32 @@ import retrofit2.Response
 
 class SplashFragment : BaseFragment(R.layout.fragment_splash) {
     private val binding by viewBinding(FragmentSplashBinding::bind)
+    private var versionCheck = false
     private val fadeIn: Animation by lazy {
-        AnimationUtils.loadAnimation(mContext, R.anim.fade_in)
+        AnimationUtils.loadAnimation(mContext, R.anim.fade_in).apply {
+            setAnimationListener(object : AnimationListener {
+                override fun onAnimationStart(animation: Animation?) {
+                }
+
+                override fun onAnimationEnd(animation: Animation?) {
+                    binding.isReady = true
+                }
+
+                override fun onAnimationRepeat(animation: Animation?) {
+                }
+
+            })
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        checkAppVersion()
+        if (versionCheck) {
+            binding.logo.startAnimation(fadeIn)
+        } else {
+            binding.isReady = true
+            checkAppVersion()
+        }
         initView()
     }
 
@@ -52,6 +72,7 @@ class SplashFragment : BaseFragment(R.layout.fragment_splash) {
                             Constants.ResponseCode.INACTIVE -> {
                                 update()
                             }
+
                             Constants.ResponseCode.NOT_EXIST -> {
                                 notExist()
                             }
@@ -84,18 +105,20 @@ class SplashFragment : BaseFragment(R.layout.fragment_splash) {
         binding.btnStart.setOnClickListener {
             findNavController().navigate(SplashFragmentDirections.toHome())
         }
-        fadeIn.setAnimationListener(object :AnimationListener {
-            override fun onAnimationStart(animation: Animation?) {
-            }
 
-            override fun onAnimationEnd(animation: Animation?) {
-                binding.isReady = true
-            }
+        binding.btnSetting.setOnClickListener {
+            findNavController().navigate(SplashFragmentDirections.toSetting())
+        }
+    }
 
-            override fun onAnimationRepeat(animation: Animation?) {
-            }
+    private var mBackWait = 0L
 
-        })
-        binding.logo.startAnimation(fadeIn)
+    override fun onBack() {
+        if (System.currentTimeMillis() - mBackWait >= 2000) {
+            mBackWait = System.currentTimeMillis()
+            mContext.toast("뒤로가기를 한번 더 누르시면 종료됩니다.")
+        } else {
+            mContext.exitApp()
+        }
     }
 }

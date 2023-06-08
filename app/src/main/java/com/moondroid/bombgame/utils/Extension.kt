@@ -1,5 +1,6 @@
 package com.moondroid.bombgame.utils
 
+import android.animation.Animator
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
@@ -10,6 +11,7 @@ import android.util.TypedValue
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import com.airbnb.lottie.LottieAnimationView
 
 object Extension {
     fun View.visible(boolean: Boolean = true) {
@@ -54,7 +56,24 @@ object Extension {
         })
     }
 
-    @Suppress("Unused")
+    fun LottieAnimationView.afterAnimation(onFinish :() -> Unit) {
+        this.addAnimatorListener(object: Animator.AnimatorListener{
+            override fun onAnimationStart(animation: Animator) {
+
+            }
+
+            override fun onAnimationEnd(animation: Animator) {
+                onFinish.invoke()
+            }
+
+            override fun onAnimationCancel(animation: Animator) {
+            }
+
+            override fun onAnimationRepeat(animation: Animator) {
+            }
+        })
+    }
+
     fun Context.toast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }

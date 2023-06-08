@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.moondroid.bombgame.presentation.view.setting.SettingViewModel" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/ToolbarTitle"
+                android:letterSpacing="0.1"
+                android:text="설정" />
+        </com.google.android.material.appbar.MaterialToolbar>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"
+            android:background="@color/white_01">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/gameWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvGame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/font_ex"
+                    android:text="게임 설정"
+                    android:textColor="@color/blue_darK02"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="@id/lottieChar01"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    app:buttonTint="@color/blue_darK02"
+                    android:checked="@={model.game01}"
+                    android:fontFamily="@font/font_ex"
+                    android:text="초성 퀴즈"
+                    android:textColor="@color/blue_darK02"
+                    android:textSize="20sp"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    app:buttonTint="@color/blue_darK02"
+                    android:checked="@={model.game02}"
+                    android:fontFamily="@font/font_ex"
+                    android:text="연상 퀴즈"
+                    android:textColor="@color/blue_darK02"
+                    android:textSize="20sp"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    app:buttonTint="@color/blue_darK02"
+                    android:checked="@={model.game03}"
+                    android:fontFamily="@font/font_ex"
+                    android:text="질문 게임"
+                    android:textColor="@color/blue_darK02"
+                    android:textSize="20sp"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:background="@color/white"
+                android:padding="16dp"
+                app:layout_constraintTop_toBottomOf="@id/gameWrapper">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCharacter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/font_ex"
+                    android:text="캐릭터 설정"
+                    android:textColor="@color/blue_darK02"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieChar01"
+                    playAnim="@{model.charIndex == 1}"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="16dp"
+                    android:onClick="@{() -> model.changeChar(1)}"
+                    app:layout_constraintDimensionRatio="1"
+                    app:layout_constraintEnd_toStartOf="@id/lottieChar02"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCharacter"
+                    app:layout_constraintWidth_percent="0.29"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/bomb01" />
+
+                <FrameLayout
+                    visible="@{model.charIndex == 1}"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:background="@color/blue_darK02"
+                    app:layout_constraintEnd_toEndOf="@id/lottieChar01"
+                    app:layout_constraintStart_toStartOf="@id/lottieChar01"
+                    app:layout_constraintTop_toBottomOf="@id/lottieChar01" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieChar02"
+                    playAnim="@{model.charIndex == 2}"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="16dp"
+                    android:onClick="@{() -> model.changeChar(2)}"
+                    app:layout_constraintDimensionRatio="1"
+                    app:layout_constraintEnd_toStartOf="@id/lottieChar03"
+                    app:layout_constraintStart_toEndOf="@id/lottieChar01"
+                    app:layout_constraintTop_toBottomOf="@id/tvCharacter"
+                    app:layout_constraintWidth_percent="0.29"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/bomb02" />
+
+                <FrameLayout
+                    visible="@{model.charIndex == 2}"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:background="@color/blue_darK02"
+                    app:layout_constraintEnd_toEndOf="@id/lottieChar02"
+                    app:layout_constraintStart_toStartOf="@id/lottieChar02"
+                    app:layout_constraintTop_toBottomOf="@id/lottieChar02" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieChar03"
+                    playAnim="@{model.charIndex == 3}"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="16dp"
+                    android:onClick="@{() -> model.changeChar(3)}"
+                    app:layout_constraintDimensionRatio="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/lottieChar02"
+                    app:layout_constraintTop_toBottomOf="@id/tvCharacter"
+                    app:layout_constraintWidth_percent="0.29"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/bomb03" />
+
+                <FrameLayout
+                    visible="@{model.charIndex == 3}"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:background="@color/blue_darK02"
+                    app:layout_constraintEnd_toEndOf="@id/lottieChar03"
+                    app:layout_constraintStart_toStartOf="@id/lottieChar03"
+                    app:layout_constraintTop_toBottomOf="@id/lottieChar03" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</layout>

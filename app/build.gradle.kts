@@ -21,9 +21,16 @@ android {
         versionName = "1.0.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        val googleAdsAppId: String = properties.getProperty("google.ads.app.id")
+        manifestPlaceholders["googleAdsAppId"] = googleAdsAppId
     }
 
     buildTypes {
+        debug {
+            resValue("string", "banner_id", "ca-app-pub-3940256099942544/6300978111")
+            resValue("string", "foreground_id", "ca-app-pub-3940256099942544/1033173712")
+        }
         release {
             isMinifyEnabled = true
             isShrinkResources = false
@@ -33,6 +40,12 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+
+            val bannerId: String = properties.getProperty("google.ads.banner.id")
+            val foregroundId: String = properties.getProperty("google.ads.foreground.id")
+
+            resValue("string", "banner_id", bannerId)
+            resValue("string", "foreground_id", foregroundId)
         }
     }
     compileOptions {
@@ -59,6 +72,8 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
+    implementation("com.google.android.gms:play-services-ads:22.1.0")
 
     implementation("androidx.activity:activity-ktx:1.7.2")
     implementation("androidx.fragment:fragment-ktx:1.5.7")

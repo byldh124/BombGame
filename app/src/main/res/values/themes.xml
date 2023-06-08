@@ -6,4 +6,8 @@
     </style>
 
     <style name="Theme.BombGame" parent="Base.Theme.BombGame" />
+
+    <style name="ToolbarThemeBlack">
+        <item name="colorControlNormal">@color/blue_darK01</item>
+    </style>
 </resources>
