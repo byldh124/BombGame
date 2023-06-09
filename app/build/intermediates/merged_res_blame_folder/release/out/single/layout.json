@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "com.moondroid.bombgame.app-mergeReleaseResources-63:/layout/fragment_setting.xml",
+        "source": "com.moondroid.bombgame.app-main-65:/layout/fragment_setting.xml"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-mergeReleaseResources-63:/layout/fragment_rules.xml",
+        "source": "com.moondroid.bombgame.app-main-65:/layout/fragment_rules.xml"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-mergeReleaseResources-63:/layout/fragment_home.xml",
+        "source": "com.moondroid.bombgame.app-main-65:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-mergeReleaseResources-63:/layout/dialog_exit.xml",
+        "source": "com.moondroid.bombgame.app-main-65:/layout/dialog_exit.xml"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-mergeReleaseResources-63:/layout/dialog_one_button.xml",
+        "source": "com.moondroid.bombgame.app-main-65:/layout/dialog_one_button.xml"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-mergeReleaseResources-63:/layout/fragment_splash.xml",
+        "source": "com.moondroid.bombgame.app-main-65:/layout/fragment_splash.xml"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-mergeReleaseResources-63:/layout/activity_main.xml",
+        "source": "com.moondroid.bombgame.app-main-65:/layout/activity_main.xml"
+    }
+]

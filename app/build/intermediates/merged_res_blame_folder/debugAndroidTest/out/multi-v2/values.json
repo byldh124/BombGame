@@ -1,0 +1,45 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.moondroid.bombgame.test.app-mergeDebugAndroidTestResources-3:/values/values.xml",
+            "map": [
+                {
+                    "source": "/Users/sehan/Desktop/workspace/02.Private/Android/Practice/BombGame/app/build/generated/res/resValues/androidTest/debug/values/gradleResValues.xml",
+                    "from": {
+                        "startLines": "6,8",
+                        "startColumns": "4,4",
+                        "startOffsets": "156,296",
+                        "endColumns": "97,101",
+                        "endOffsets": "249,393"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,153",
+                        "endColumns": "97,101",
+                        "endOffsets": "148,250"
+                    }
+                },
+                {
+                    "source": "/Users/sehan/.gradle/caches/transforms-3/7d23057abc036e7846819a083dd2e855/transformed/core-1.5.0/res/values/values.xml",
+                    "from": {
+                        "startLines": "4,11",
+                        "startColumns": "0,0",
+                        "startOffsets": "176,544",
+                        "endLines": "10,17",
+                        "endColumns": "8,8",
+                        "endOffsets": "543,909"
+                    },
+                    "to": {
+                        "startLines": "4,11",
+                        "startColumns": "4,4",
+                        "startOffsets": "255,627",
+                        "endLines": "10,17",
+                        "endColumns": "8,8",
+                        "endOffsets": "622,992"
+                    }
+                }
+            ]
+        }
+    ]
+}

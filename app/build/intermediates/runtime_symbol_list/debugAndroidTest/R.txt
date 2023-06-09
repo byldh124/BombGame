@@ -1,0 +1,4 @@
+int string banner_id 0x7f010000
+int string foreground_id 0x7f010001
+int style WhiteBackgroundDialogTheme 0x7f020000
+int style WhiteBackgroundTheme 0x7f020001
