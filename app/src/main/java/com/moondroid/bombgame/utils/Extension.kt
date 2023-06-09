@@ -12,6 +12,7 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import com.airbnb.lottie.LottieAnimationView
+import com.moondroid.bombgame.utils.firebase.FBCrash
 
 object Extension {
     fun View.visible(boolean: Boolean = true) {
@@ -22,9 +23,9 @@ object Extension {
         Log.e("Moondroid", "[${this.javaClass.simpleName.trim()}] | $msg")
     }
 
-
     fun Throwable.logException() {
         Log.e("logException", this.stackTraceToString())
+        FBCrash.logException(this)
     }
 
     fun String.shuffle(): String {

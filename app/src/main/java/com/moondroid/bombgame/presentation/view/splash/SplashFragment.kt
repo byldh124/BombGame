@@ -7,8 +7,10 @@ import android.view.View
 import android.view.animation.Animation
 import android.view.animation.Animation.AnimationListener
 import android.view.animation.AnimationUtils
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.moondroid.bombgame.BuildConfig
 import com.moondroid.bombgame.R
 import com.moondroid.bombgame.data.model.BaseResponse
@@ -88,7 +90,7 @@ class SplashFragment : BaseFragment(R.layout.fragment_splash) {
     }
 
     private fun update() {
-        showMessage("새로운 버전이 나왔습니다. 플레이 스토어에서 업데이트 해주세요.") {
+        showMessage(getString(R.string.description_plz_update)) {
             val updateIntent = Intent(Intent.ACTION_VIEW)
             updateIntent.data = Uri.parse("market://details?id=${mContext.packageName}")
             startActivity(updateIntent)
@@ -96,7 +98,7 @@ class SplashFragment : BaseFragment(R.layout.fragment_splash) {
     }
 
     private fun notExist() {
-        showMessage("해당 버전은 존재하지 않습니다.\nv${BuildConfig.VERSION_NAME}(${BuildConfig.VERSION_CODE})") {
+        showMessage("${getString(R.string.description_version_not_exist)}\nv${BuildConfig.VERSION_NAME}(${BuildConfig.VERSION_CODE})") {
             mContext.exitApp()
         }
     }
@@ -109,6 +111,11 @@ class SplashFragment : BaseFragment(R.layout.fragment_splash) {
         binding.btnSetting.setOnClickListener {
             findNavController().navigate(SplashFragmentDirections.toSetting())
         }
+
+        binding.btnHowToUse.setOnClickListener {
+            findNavController().navigate(SplashFragmentDirections.toTutorial())
+        }
+
     }
 
     private var mBackWait = 0L
@@ -116,7 +123,7 @@ class SplashFragment : BaseFragment(R.layout.fragment_splash) {
     override fun onBack() {
         if (System.currentTimeMillis() - mBackWait >= 2000) {
             mBackWait = System.currentTimeMillis()
-            mContext.toast("뒤로가기를 한번 더 누르시면 종료됩니다.")
+            mContext.toast(getString(R.string.description_press_back_once_more))
         } else {
             mContext.exitApp()
         }

@@ -9,7 +9,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/logo"
@@ -23,45 +24,42 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.45" />
+            app:layout_constraintVertical_bias="0.2" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/btnStart"
             style="@style/ButtonBlue01"
-            android:layout_width="0dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
             visible="@{isReady}"
-            android:text="시작 하기"
+            android:text="@string/cmn_start"
             android:visibility="visible"
-            app:layout_constraintEnd_toEndOf="@id/logo"
-            app:layout_constraintStart_toStartOf="@id/logo"
-            app:layout_constraintTop_toBottomOf="@id/logo"
-            app:layout_constraintWidth_percent="0.6" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/btnHowToUse"
             style="@style/ButtonBlue01"
-            android:layout_width="0dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="게임 방법"
+            android:text="@string/cmn_game_rules"
             visible="@{isReady}"
-            app:layout_constraintEnd_toEndOf="@id/logo"
-            app:layout_constraintStart_toStartOf="@id/logo"
+            app:layout_constraintStart_toStartOf="@id/btnStart"
             app:layout_constraintTop_toBottomOf="@id/btnStart"
             app:layout_constraintWidth_percent="0.6" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/btnSetting"
             style="@style/ButtonBlue01"
-            android:layout_width="0dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="설정"
+            android:text="@string/cmn_setting"
             visible="@{isReady}"
-            app:layout_constraintEnd_toEndOf="@id/logo"
-            app:layout_constraintStart_toStartOf="@id/logo"
+            app:layout_constraintEnd_toEndOf="@id/btnStart"
             app:layout_constraintTop_toBottomOf="@id/btnHowToUse"
             app:layout_constraintWidth_percent="0.6" />
 

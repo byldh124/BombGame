@@ -27,11 +27,10 @@
         <item>여자 배우</item>
         <item>한국 영화</item>
         <item>외국 영화</item>
-        <item>만화</item>
+        <item>만화 이름</item>
         <item>한국 드라마</item>
         <item>외국 드라마</item>
         <item>나라 이름</item>
-        <item>한국의 지명</item>
     </string-array>
 
     <string-array name="game03">

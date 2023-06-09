@@ -3,10 +3,9 @@
 
 
     <!-- Activity Main Theme-->
-    <style name="WhiteStatusBar" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="WhiteStatusBar" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:statusBarColor">@color/white</item>
         <item name="android:windowLightStatusBar">true</item>
-        <item name="android:background">@color/white</item>
     </style>
 
     <style name="Toolbar">
@@ -52,5 +51,21 @@
 
     <style name="ButtonOrange01" parent="MyButton">
         <item name="android:background">@drawable/button_orange01</item>
+    </style>
+
+    <style name="TextTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font_ex</item>
+        <item name="android:textColor">@color/blue_darK02</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="TextDescription">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/nanum_square_round_b</item>
+        <item name="android:textColor">@color/blue_darK02</item>
+        <item name="android:textSize">16sp</item>
     </style>
 </resources>

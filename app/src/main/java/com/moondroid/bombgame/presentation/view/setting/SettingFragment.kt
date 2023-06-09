@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import com.moondroid.bombgame.R
 import com.moondroid.bombgame.R.layout.fragment_setting
 import com.moondroid.bombgame.databinding.FragmentSettingBinding
 import com.moondroid.bombgame.presentation.base.BaseFragment
@@ -19,6 +21,10 @@ class SettingFragment : BaseFragment(fragment_setting) {
         super.onViewCreated(view, savedInstanceState)
         binding.lifecycleOwner = viewLifecycleOwner
         binding.model = viewModel
+
+        binding.icBack.setOnClickListener {
+            findNavController().popBackStack()
+        }
 
         viewModel.game01.observe(viewLifecycleOwner) {
             if (checkValue()) {
@@ -49,7 +55,7 @@ class SettingFragment : BaseFragment(fragment_setting) {
         return if (boolean) {
             true
         } else {
-            mContext.toast("게임을 하나 이상 선택하셔야 합니다.")
+            mContext.toast(getString(R.string.desc_select_more_one_game))
             false
         }
     }

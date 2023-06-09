@@ -5,6 +5,8 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("androidx.navigation.safeargs.kotlin")
     id("org.jetbrains.kotlin.kapt")
+    id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
 }
 
 val properties = gradleLocalProperties(rootDir)
@@ -76,7 +78,7 @@ dependencies {
     implementation("com.google.android.gms:play-services-ads:22.1.0")
 
     implementation("androidx.activity:activity-ktx:1.7.2")
-    implementation("androidx.fragment:fragment-ktx:1.5.7")
+    implementation("androidx.fragment:fragment-ktx:1.6.0")
 
     implementation("com.github.bumptech.glide:glide:4.15.1")
     implementation("com.google.code.gson:gson:2.10.1")
@@ -91,7 +93,10 @@ dependencies {
 
     // okhttp3
     implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.11")
-
     implementation("com.airbnb.android:lottie:6.0.0")
 
+    //firebase
+    implementation(platform("com.google.firebase:firebase-bom:32.1.0"))
+    implementation("com.google.firebase:firebase-crashlytics-ktx")
+    implementation("com.google.firebase:firebase-analytics-ktx")
 }

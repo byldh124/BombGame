@@ -28,13 +28,15 @@ class ExitDialog(context: Context, var eventListener: EventListener,  var type: 
     override fun show() {
         super.show()
         if (type == Type.RESUME) {
-            binding.btnResume.text = "계속하기"
+            binding.tvMessage.text = context.getString(R.string.cmn_want_exit)
+            binding.btnResume.text = context.getString(R.string.cmn_continue)
             binding.btnResume.setOnClickListener {
                 eventListener.onResume()
                 super.cancel()
             }
         } else {
-            binding.btnResume.text = "다시하기"
+            binding.tvMessage.text = context.getString(R.string.cmn_continue_game)
+            binding.btnResume.text = context.getString(R.string.cmn_retry)
             binding.btnResume.setOnClickListener {
                 eventListener.onRetry()
                 super.cancel()

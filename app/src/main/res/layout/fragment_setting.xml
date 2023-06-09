@@ -10,30 +10,35 @@
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             style="@style/Toolbar">
 
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/icBack"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_back"/>
+
             <androidx.appcompat.widget.AppCompatTextView
                 style="@style/ToolbarTitle"
                 android:letterSpacing="0.1"
-                android:text="설정" />
+                android:text="@string/cmn_setting" />
         </com.google.android.material.appbar.MaterialToolbar>
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/toolbar"
-            android:background="@color/white_01">
+            android:layout_below="@id/toolbar">
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/gameWrapper"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="4dp"
                 android:background="@color/white"
                 android:orientation="vertical"
                 android:padding="16dp"
@@ -41,13 +46,9 @@
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tvGame"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/TextTitle"
                     android:layout_marginStart="16dp"
-                    android:fontFamily="@font/font_ex"
-                    android:text="게임 설정"
-                    android:textColor="@color/blue_darK02"
-                    android:textSize="24sp"
+                    android:text="@string/cmn_game_setting"
                     app:layout_constraintStart_toStartOf="@id/lottieChar01"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -59,7 +60,7 @@
                     app:buttonTint="@color/blue_darK02"
                     android:checked="@={model.game01}"
                     android:fontFamily="@font/font_ex"
-                    android:text="초성 퀴즈"
+                    android:text="@string/cmn_initial_game"
                     android:textColor="@color/blue_darK02"
                     android:textSize="20sp"/>
 
@@ -70,7 +71,7 @@
                     app:buttonTint="@color/blue_darK02"
                     android:checked="@={model.game02}"
                     android:fontFamily="@font/font_ex"
-                    android:text="연상 퀴즈"
+                    android:text="@string/cmn_association_game"
                     android:textColor="@color/blue_darK02"
                     android:textSize="20sp"/>
 
@@ -81,7 +82,7 @@
                     app:buttonTint="@color/blue_darK02"
                     android:checked="@={model.game03}"
                     android:fontFamily="@font/font_ex"
-                    android:text="질문 게임"
+                    android:text="@string/cmn_question_game"
                     android:textColor="@color/blue_darK02"
                     android:textSize="20sp"/>
 
@@ -90,20 +91,15 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="4dp"
                 android:background="@color/white"
                 android:padding="16dp"
                 app:layout_constraintTop_toBottomOf="@id/gameWrapper">
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tvCharacter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/TextTitle"
                     android:layout_marginStart="16dp"
-                    android:fontFamily="@font/font_ex"
-                    android:text="캐릭터 설정"
-                    android:textColor="@color/blue_darK02"
-                    android:textSize="24sp"
+                    android:text="@string/cmn_character_setting"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 

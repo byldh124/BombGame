@@ -37,8 +37,8 @@
 
     <fragment
         android:id="@+id/tutorialFragment"
-        android:name="com.moondroid.bombgame.presentation.view.tutorial.TutorialFragment"
-        tools:layout="@layout/fragment_tutorial"/>
+        android:name="com.moondroid.bombgame.presentation.view.rules.RulesFragment"
+        tools:layout="@layout/fragment_rules"/>
 
     <fragment
         android:id="@+id/settingFragment"

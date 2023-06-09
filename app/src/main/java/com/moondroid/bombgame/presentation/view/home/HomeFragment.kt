@@ -7,6 +7,7 @@ import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.findNavController
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.MobileAds
+import com.moondroid.bombgame.BuildConfig
 import com.moondroid.bombgame.R
 import com.moondroid.bombgame.databinding.FragmentHomeBinding
 import com.moondroid.bombgame.presentation.base.BaseFragment
@@ -16,6 +17,7 @@ import com.moondroid.bombgame.utils.Extension.afterAnimation
 import com.moondroid.bombgame.utils.Extension.debug
 import com.moondroid.bombgame.utils.Extension.logException
 import com.moondroid.bombgame.utils.Preferences
+import com.moondroid.bombgame.utils.firebase.FBAnalyze
 import java.util.Timer
 import java.util.TimerTask
 import java.util.concurrent.Executor
@@ -42,7 +44,10 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
             }
 
             override fun onRetry() {
-                setGame()
+                FBAnalyze.logEvent("RETRY")
+                mContext.showAd {
+                    setGame()
+                }
             }
         })
     }
@@ -59,6 +64,7 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
     }
 
     private fun init() {
+        FBAnalyze.logEvent("START_GAME")
         clockSound = MediaPlayer.create(mContext, R.raw.clock).apply {
             isLooping = true
         }
@@ -95,7 +101,7 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
     }
 
     private fun setGame() {
-        binding.type = gameType[Random.nextInt(gameType.lastIndex)]
+        binding.type = gameType[Random.nextInt(gameType.size)]
         time = 0
         binding.status = GameStatus.COUNT
         binding.lottieCountDown.playAnimation()
@@ -106,7 +112,7 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
         clockSound?.start()
         binding.lottieBomb.playAnimation()
 
-        randomTime = Random.nextInt(5, 10)
+        randomTime = getTime()
         timer = object : TimerTask() {
             override fun run() {
                 try {
@@ -122,6 +128,7 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
                                 binding.status = GameStatus.EXPLOSION
                                 clockSound?.pause()
                                 boomSound?.start()
+                                mContext.vibrate()
                                 binding.lottieExplosion.playAnimation()
                             }
                         }
@@ -150,13 +157,20 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
 
     override fun onBack() {
         if (binding.status == GameStatus.EXPLOSION) {
-            debug("Explosion")
             exitDialog.type = ExitDialog.Type.RETRY
         } else {
             exitDialog.type = ExitDialog.Type.RESUME
             isPause = true
         }
         exitDialog.show()
+    }
+
+    private fun getTime() : Int{
+        return if (BuildConfig.DEBUG) {
+            Random.nextInt(5, 10)
+        } else {
+            Random.nextInt(20, 60)
+        }
     }
 
     private fun getExecutor(): Executor = ContextCompat.getMainExecutor(mContext)

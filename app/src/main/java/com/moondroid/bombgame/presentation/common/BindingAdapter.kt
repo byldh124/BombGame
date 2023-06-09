@@ -25,9 +25,9 @@ object BindingAdapter {
     @JvmStatic
     fun TextView.setTypeTitle(gameType: Int) {
         text = when(gameType) {
-            2 -> "연상 퀴즈"
-            3 -> "질문 게임"
-            else -> "초성 퀴즈"
+            2 -> context.getString(R.string.cmn_association_game)
+            3 -> context.getString(R.string.cmn_question_game)
+            else -> context.getString(R.string.cmn_initial_game)
         }
     }
 
@@ -35,9 +35,9 @@ object BindingAdapter {
     @JvmStatic
     fun TextView.setTypeDescription(gameType: Int) {
         text = when(gameType) {
-            2 -> "제시어를 보고 연상 되는 단어를 말해 보세요."
-            3 -> "질문에 답하고 옆 사람에게 다른 질문을 해 보세요. "
-            else -> "다음 초성을 보고 단어를 만들어 보세요."
+            2 -> context.getString(R.string.cmn_desc_association)
+            3 -> context.getString(R.string.cmn_desc_questIon)
+            else -> context.getString(R.string.cmn_desc_initial)
         }
     }
 
