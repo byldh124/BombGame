@@ -6,7 +6,7 @@ import android.os.Bundle
 import com.moondroid.bombgame.R
 import com.moondroid.bombgame.databinding.DialogExitBinding
 
-class ExitDialog(context: Context, var eventListener: EventListener,  var type: Type = Type.RETRY ) :
+class ExitDialog(context: Context, var eventListener: EventListener, var type: Type = Type.RETRY) :
     Dialog(context, R.style.DialogTheme) {
     private lateinit var binding: DialogExitBinding
 
@@ -15,13 +15,18 @@ class ExitDialog(context: Context, var eventListener: EventListener,  var type: 
         binding = DialogExitBinding.inflate(layoutInflater, null, false)
         setContentView(binding.root)
         binding.btnExit.setOnClickListener {
-            cancel()
+            eventListener.onCancel()
+            super.cancel()
         }
     }
 
     override fun cancel() {
         super.cancel()
-        eventListener.onCancel()
+        if (type == Type.RESUME) {
+            eventListener.onResume()
+        } else {
+            eventListener.onRetry()
+        }
     }
 
 
