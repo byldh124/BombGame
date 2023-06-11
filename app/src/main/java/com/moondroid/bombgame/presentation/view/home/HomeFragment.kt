@@ -14,7 +14,6 @@ import com.moondroid.bombgame.presentation.base.BaseFragment
 import com.moondroid.bombgame.presentation.common.viewBinding
 import com.moondroid.bombgame.presentation.dialog.ExitDialog
 import com.moondroid.bombgame.utils.Extension.afterAnimation
-import com.moondroid.bombgame.utils.Extension.debug
 import com.moondroid.bombgame.utils.Extension.logException
 import com.moondroid.bombgame.utils.Preferences
 import com.moondroid.bombgame.utils.firebase.FBAnalyze
@@ -41,6 +40,7 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
 
             override fun onResume() {
                 isPause = false
+                clockSound?.start()
             }
 
             override fun onRetry() {
@@ -153,6 +153,16 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
             it.cancel()
             timer = null
         }
+
+        clockSound?.let {
+            it.stop()
+            clockSound = null
+        }
+
+        boomSound?.let {
+            it.stop()
+            boomSound = null
+        }
     }
 
     override fun onBack() {
@@ -160,6 +170,7 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
             exitDialog.type = ExitDialog.Type.RETRY
         } else {
             exitDialog.type = ExitDialog.Type.RESUME
+            clockSound?.stop()
             isPause = true
         }
         exitDialog.show()

@@ -10,11 +10,6 @@
         <item>ㅅ</item>
         <item>ㅇ</item>
         <item>ㅈ</item>
-        <item>ㅊ</item>
-        <item>ㅋ</item>
-        <item>ㅌ</item>
-        <item>ㅍ</item>
-        <item>ㅎ</item>
     </string-array>
     <string-array name="game02">
         <item>동물</item>
@@ -44,7 +39,7 @@
         <item>후라이드 치킨 vs 양념 치킨</item>
         <item>지금 가장 먹고 싶은 것은?</item>
         <item>지금 여기에서 가장 친해지고 싶은 사람은?</item>
-        <item>좋아하는 영화 대사 성대모사로 말하기</item>
+        <item>가장 재밌었던 영화는?</item>
         <item>산 vs 바다</item>
         <item>당신의 이상형은?</item>
     </string-array>

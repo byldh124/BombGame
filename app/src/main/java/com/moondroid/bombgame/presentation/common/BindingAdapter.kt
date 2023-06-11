@@ -55,13 +55,7 @@ object BindingAdapter {
             }
             else -> {
                 val list = context.resources.getStringArray(R.array.game01)
-                val first = Random.nextInt(list.lastIndex)
-                val second = if (first > 8) {
-                    Random.nextInt(8)
-                } else {
-                    Random.nextInt(list.lastIndex)
-                }
-                list[first] + list[second]
+                list[Random.nextInt(list.size)] + list[Random.nextInt(list.size)]
             }
         }
     }
