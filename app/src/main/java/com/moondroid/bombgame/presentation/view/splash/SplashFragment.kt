@@ -25,6 +25,7 @@ import com.moondroid.bombgame.utils.Extension.exitApp
 import com.moondroid.bombgame.utils.Extension.logException
 import com.moondroid.bombgame.utils.Extension.toast
 import com.moondroid.bombgame.utils.Extension.visible
+import com.moondroid.bombgame.utils.Preferences
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -91,9 +92,13 @@ class SplashFragment : BaseFragment(R.layout.fragment_splash) {
 
     private fun update() {
         showMessage(getString(R.string.description_plz_update)) {
-            val updateIntent = Intent(Intent.ACTION_VIEW)
-            updateIntent.data = Uri.parse("market://details?id=${mContext.packageName}")
-            startActivity(updateIntent)
+            try {
+                val updateIntent = Intent(Intent.ACTION_VIEW)
+                updateIntent.data = Uri.parse("market://details?id=${mContext.packageName}")
+                startActivity(updateIntent)
+            } catch (e: Exception) {
+                e.logException()
+            }
         }
     }
 
@@ -116,16 +121,21 @@ class SplashFragment : BaseFragment(R.layout.fragment_splash) {
             findNavController().navigate(SplashFragmentDirections.toTutorial())
         }
 
+        if (Preferences.requestReview()) mContext.requestReview()
     }
 
     private var mBackWait = 0L
 
     override fun onBack() {
-        if (System.currentTimeMillis() - mBackWait >= 2000) {
-            mBackWait = System.currentTimeMillis()
-            mContext.toast(getString(R.string.description_press_back_once_more))
-        } else {
-            mContext.exitApp()
+        try {
+            if (System.currentTimeMillis() - mBackWait >= 2000) {
+                mBackWait = System.currentTimeMillis()
+                mContext.toast(getString(R.string.description_press_back_once_more))
+            } else {
+                mContext.exitApp()
+            }
+        } catch (e: Exception) {
+            e.logException()
         }
     }
 }

@@ -19,8 +19,8 @@ android {
         applicationId = "com.moondroid.bombgame"
         minSdk = 23
         targetSdk = 33
-        versionCode = 2
-        versionName = "1.0.2"
+        versionCode = 3
+        versionName = "1.0.3"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
@@ -99,4 +99,5 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:32.1.0"))
     implementation("com.google.firebase:firebase-crashlytics-ktx")
     implementation("com.google.firebase:firebase-analytics-ktx")
+
 }
