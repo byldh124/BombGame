@@ -101,10 +101,14 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
     }
 
     private fun setGame() {
-        binding.type = gameType[Random.nextInt(gameType.size)]
-        time = 0
-        binding.status = GameStatus.COUNT
-        binding.lottieCountDown.playAnimation()
+        try {
+            binding.type = gameType[Random.nextInt(gameType.size)]
+            time = 0
+            binding.status = GameStatus.COUNT
+            binding.lottieCountDown.playAnimation()
+        } catch (e: Exception) {
+            e.logException()
+        }
     }
 
     private fun startAnim() {

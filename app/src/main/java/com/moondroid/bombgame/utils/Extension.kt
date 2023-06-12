@@ -13,6 +13,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.airbnb.lottie.LottieAnimationView
 import com.moondroid.bombgame.utils.firebase.FBCrash
+import java.text.SimpleDateFormat
 
 object Extension {
     fun View.visible(boolean: Boolean = true) {
@@ -83,6 +84,11 @@ object Extension {
         this.moveTaskToBack(true)
         this.finish()
         android.os.Process.killProcess(android.os.Process.myPid())
+    }
+
+    @SuppressLint("SimpleDateFormat")
+    fun getToday(pattern: String = "yyMMdd"): String {
+        return SimpleDateFormat(pattern).format(System.currentTimeMillis())
     }
 
 
