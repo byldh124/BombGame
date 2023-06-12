@@ -1,5 +1,0 @@
-com.moondroid.bombgame.test
-string banner_id
-string foreground_id
-style WhiteBackgroundDialogTheme
-style WhiteBackgroundTheme
