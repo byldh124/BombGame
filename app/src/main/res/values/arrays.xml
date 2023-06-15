@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="game01">
+    <string-array name="game_initial">
         <item>ㄱ</item>
         <item>ㄴ</item>
         <item>ㄷ</item>
@@ -11,9 +11,8 @@
         <item>ㅇ</item>
         <item>ㅈ</item>
     </string-array>
-    <string-array name="game02">
+    <string-array name="game_association">
         <item>동물</item>
-        <item>가전 제품</item>
         <item>남자 솔로 가수</item>
         <item>여자 솔로 가수</item>
         <item>남자 아이돌</item>
@@ -28,19 +27,36 @@
         <item>나라 이름</item>
     </string-array>
 
-    <string-array name="game03">
+    <string-array name="game_question">
         <item>가장 자신 있는 외모 부위는?</item>
         <item>좋아 하는 가수는?</item>
         <item>가장 최근에 본 영화는?</item>
         <item>강아지 vs 고양이</item>
         <item>짜장면 vs 짬뽕</item>
         <item>가장 좋았던 여행 장소는?</item>
-        <item>나랑 닮은 유명인은?</item>
         <item>후라이드 치킨 vs 양념 치킨</item>
         <item>지금 가장 먹고 싶은 것은?</item>
-        <item>지금 여기에서 가장 친해지고 싶은 사람은?</item>
         <item>가장 재밌었던 영화는?</item>
         <item>산 vs 바다</item>
         <item>당신의 이상형은?</item>
+    </string-array>
+
+    <string-array name="game_last_word">
+        <item>~형</item>
+        <item>~파</item>
+        <item>~지</item>
+        <item>~수</item>
+        <item>~대</item>
+        <item>~인</item>
+        <item>~나</item>
+        <item>~비</item>
+        <item>~증</item>
+        <item>~병</item>
+        <item>~도</item>
+        <item>~장</item>
+        <item>~인</item>
+        <item>~수</item>
+        <item>~츄</item>
+        <item>~기</item>
     </string-array>
 </resources>

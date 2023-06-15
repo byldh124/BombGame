@@ -2,6 +2,7 @@ package com.moondroid.bombgame.utils
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.moondroid.bombgame.utils.Constants.GameType
 import com.moondroid.bombgame.utils.Extension.getToday
 
 object Preferences {
@@ -10,9 +11,10 @@ object Preferences {
 
     object Key {
         const val CHARACTER = "KEY_CHARACTER"
-        const val GAME01 = "KEY_GAME01"
-        const val GAME02 = "KEY_GAME02"
-        const val GAME03 = "KEY_GAME03"
+
+        fun getGameKey(type: GameType) : String{
+            return "KEY_$type"
+        }
 
         const val INSTALL_DATE = "INSTALL_DATE"
         const val REVIEW = "REVIEW"
@@ -49,14 +51,8 @@ object Preferences {
     fun getCharacter(): Int = getInt(Key.CHARACTER, 1)
     fun setCharacter(index: Int) = putInt(Key.CHARACTER, index)
 
-    fun getGame01(): Boolean = getBoolean(Key.GAME01, true)
-    fun setGame01(boolean: Boolean) = putBoolean(Key.GAME01, boolean)
-
-    fun getGame02(): Boolean = getBoolean(Key.GAME02, true)
-    fun setGame02(boolean: Boolean) = putBoolean(Key.GAME02, boolean)
-
-    fun getGame03(): Boolean = getBoolean(Key.GAME03, true)
-    fun setGame03(boolean: Boolean) = putBoolean(Key.GAME03, boolean)
+    fun getGame(type: GameType): Boolean = getBoolean(Key.getGameKey(type), true)
+    fun setGame(type: GameType, boolean: Boolean) = putBoolean(Key.getGameKey(type), boolean)
 
     fun requestReview(): Boolean {
         val installDate = getString(Key.INSTALL_DATE)
