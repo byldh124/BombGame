@@ -14,7 +14,7 @@
     <string name="cmn_desc_questIon">질문에 답하고 옆 사람에게 다른 질문을 해 보세요.</string>
     <string name="cmn_desc_last_word">다음 낱말로 끝나는 단어를 말해 보세요.</string>
 
-    <string name="cmn_exit">나기기</string>
+    <string name="cmn_exit">나가기</string>
     <string name="cmn_start">시작 하기</string>
     <string name="cmn_setting">설정</string>
     <string name="cmn_game_setting">게임 설정</string>
