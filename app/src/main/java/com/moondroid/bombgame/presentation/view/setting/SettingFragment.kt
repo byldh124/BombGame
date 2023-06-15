@@ -2,7 +2,6 @@ package com.moondroid.bombgame.presentation.view.setting
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.moondroid.bombgame.R
@@ -10,6 +9,7 @@ import com.moondroid.bombgame.R.layout.fragment_setting
 import com.moondroid.bombgame.databinding.FragmentSettingBinding
 import com.moondroid.bombgame.presentation.base.BaseFragment
 import com.moondroid.bombgame.presentation.common.viewBinding
+import com.moondroid.bombgame.utils.Constants
 import com.moondroid.bombgame.utils.Extension.toast
 import com.moondroid.bombgame.utils.Preferences
 
@@ -26,32 +26,43 @@ class SettingFragment : BaseFragment(fragment_setting) {
             findNavController().popBackStack()
         }
 
-        viewModel.game01.observe(viewLifecycleOwner) {
+        viewModel.initial.observe(viewLifecycleOwner) {
             if (checkValue()) {
-                Preferences.setGame01(it)
+                Preferences.setGame(Constants.GameType.Initial, it)
             } else {
-                viewModel.game01.value = true
+                viewModel.initial.value = true
             }
         }
 
-        viewModel.game02.observe(viewLifecycleOwner) {
+        viewModel.association.observe(viewLifecycleOwner) {
             if (checkValue()) {
-                Preferences.setGame02(it)
+                Preferences.setGame(Constants.GameType.Association, it)
             } else {
-                viewModel.game02.value = true
+                viewModel.association.value = true
             }
         }
 
-        viewModel.game03.observe(viewLifecycleOwner) {
+        viewModel.question.observe(viewLifecycleOwner) {
             if (checkValue()) {
-                Preferences.setGame03(it)
+                Preferences.setGame(Constants.GameType.Question, it)
             } else {
-                viewModel.game03.value = true
+                viewModel.question.value = true
+            }
+        }
+
+        viewModel.lastWord.observe(viewLifecycleOwner) {
+            if (checkValue()) {
+                Preferences.setGame(Constants.GameType.LastWord, it)
+            } else {
+                viewModel.lastWord.value = true
             }
         }
     }
+
     private fun checkValue(): Boolean {
-        val boolean =  viewModel.game01.value == true || viewModel.game02.value == true || viewModel.game03.value == true
+        val boolean =
+            viewModel.initial.value == true || viewModel.association.value == true || viewModel.question.value == true || viewModel.lastWord.value == true
+
         return if (boolean) {
             true
         } else {

@@ -58,7 +58,7 @@
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="16dp"
                     app:buttonTint="@color/blue_darK02"
-                    android:checked="@={model.game01}"
+                    android:checked="@={model.initial}"
                     android:fontFamily="@font/font_ex"
                     android:text="@string/cmn_initial_game"
                     android:textColor="@color/blue_darK02"
@@ -69,7 +69,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     app:buttonTint="@color/blue_darK02"
-                    android:checked="@={model.game02}"
+                    android:checked="@={model.association}"
                     android:fontFamily="@font/font_ex"
                     android:text="@string/cmn_association_game"
                     android:textColor="@color/blue_darK02"
@@ -80,9 +80,20 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     app:buttonTint="@color/blue_darK02"
-                    android:checked="@={model.game03}"
+                    android:checked="@={model.question}"
                     android:fontFamily="@font/font_ex"
                     android:text="@string/cmn_question_game"
+                    android:textColor="@color/blue_darK02"
+                    android:textSize="20sp"/>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    app:buttonTint="@color/blue_darK02"
+                    android:checked="@={model.lastWord}"
+                    android:fontFamily="@font/font_ex"
+                    android:text="@string/cmn_last_word_game"
                     android:textColor="@color/blue_darK02"
                     android:textSize="20sp"/>
 

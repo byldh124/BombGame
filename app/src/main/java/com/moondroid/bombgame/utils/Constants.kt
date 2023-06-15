@@ -9,4 +9,8 @@ object Constants {
         const val INVALID_VALUE = 2003
         const val INACTIVE = 2004
     }
+
+    enum class GameType{
+        Initial, Association, Question, LastWord
+    }
 }

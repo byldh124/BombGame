@@ -13,6 +13,8 @@ import com.moondroid.bombgame.databinding.FragmentHomeBinding
 import com.moondroid.bombgame.presentation.base.BaseFragment
 import com.moondroid.bombgame.presentation.common.viewBinding
 import com.moondroid.bombgame.presentation.dialog.ExitDialog
+import com.moondroid.bombgame.utils.Constants
+import com.moondroid.bombgame.utils.Constants.GameType
 import com.moondroid.bombgame.utils.Extension.afterAnimation
 import com.moondroid.bombgame.utils.Extension.logException
 import com.moondroid.bombgame.utils.Preferences
@@ -30,7 +32,7 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
 
     private var clockSound: MediaPlayer? = null
     private var boomSound: MediaPlayer? = null
-    private val gameType = ArrayList<Int>()
+    private val gameType = ArrayList<GameType>()
 
     private val exitDialog: ExitDialog by lazy {
         ExitDialog(mContext, object : ExitDialog.EventListener {
@@ -93,9 +95,10 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
             }
         }
 
-        if (Preferences.getGame01()) gameType.add(1)
-        if (Preferences.getGame02()) gameType.add(2)
-        if (Preferences.getGame03()) gameType.add(3)
+        if (Preferences.getGame(GameType.Initial)) gameType.add(GameType.Initial)
+        if (Preferences.getGame(GameType.Association)) gameType.add(GameType.Association)
+        if (Preferences.getGame(GameType.Question)) gameType.add(GameType.Question)
+        if (Preferences.getGame(GameType.LastWord)) gameType.add(GameType.LastWord)
 
         setGame()
     }
