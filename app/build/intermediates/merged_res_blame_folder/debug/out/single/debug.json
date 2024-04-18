@@ -1,0 +1,226 @@
+[
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/raw_bomb03.json.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/raw/bomb03.json"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/layout_fragment_rules.xml.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/layout/fragment_rules.xml"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/font_nanum_square_round_r.otf.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/font/nanum_square_round_r.otf"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/raw_clock.mp3.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/raw/clock.mp3"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/drawable_bomb03.png.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/drawable/bomb03.png"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/drawable_bg_toolbar.xml.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/drawable/bg_toolbar.xml"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/font_nanum_square_eb.otf.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/font/nanum_square_eb.otf"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/font_font_ex.ttf.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/font/font_ex.ttf"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/font_nanum_square_round_eb.otf.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/font/nanum_square_round_eb.otf"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/drawable_img.jpg.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/drawable/img.jpg"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/layout_dialog_exit.xml.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/layout/dialog_exit.xml"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/drawable_ic_back.xml.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/drawable/ic_back.xml"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/font_jalnan.otf.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/font/jalnan.otf"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/anim_fade_in.xml.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/anim/fade_in.xml"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/raw_boom.wav.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/raw/boom.wav"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/drawable_bomb02.png.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/drawable/bomb02.png"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/font_nanum_square_round_b.otf.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/font/nanum_square_round_b.otf"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/layout_dialog_one_button.xml.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/layout/dialog_one_button.xml"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/font_cafe24_surround.otf.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/font/cafe24_surround.otf"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/font_nanum_square_b.otf.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/font/nanum_square_b.otf"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/navigation_nav_graph.xml.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.moondroid.bombgame.app-pngs-65:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/drawable_bomb01.png.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/drawable/bomb01.png"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/layout_fragment_setting.xml.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/layout/fragment_setting.xml"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/layout_activity_main.xml.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/raw_bomb01.json.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/raw/bomb01.json"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/raw_count_down.json.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/raw/count_down.json"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/drawable_button_orange01.xml.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/drawable/button_orange01.xml"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/drawable_button_gray01.xml.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/drawable/button_gray01.xml"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/xml_data_extraction_rules.xml.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/xml_backup_rules.xml.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/raw_bomb02.json.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/raw/bomb02.json"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/layout_fragment_home.xml.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/drawable_button_blue01.xml.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/drawable/button_blue01.xml"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/drawable_bg_dialog.xml.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/drawable/bg_dialog.xml"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/font_nanum_square_r.otf.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/font/nanum_square_r.otf"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/raw_explosion.json.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/raw/explosion.json"
+    },
+    {
+        "merged": "com.moondroid.bombgame.app-merged_res-69:/layout_fragment_splash.xml.flat",
+        "source": "com.moondroid.bombgame.app-main-71:/layout/fragment_splash.xml"
+    }
+]
