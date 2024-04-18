@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.moondroid.bombgame.app-mergeDebugResources-62:/values-hdpi-v4/values-hdpi-v4.xml",
+            "outputFile": "com.moondroid.bombgame.app-mergeDebugResources-67:/values-hdpi-v4/values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "/Users/sehan/.gradle/caches/transforms-3/fb074006d2806f09af413b75499d6257/transformed/appcompat-1.6.1/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "source": "/Users/sehan/.gradle/caches/transforms-3/8d30766b6ebb3d42f1e83acf0a77dcfc/transformed/appcompat-1.6.1/res/values-hdpi-v4/values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
