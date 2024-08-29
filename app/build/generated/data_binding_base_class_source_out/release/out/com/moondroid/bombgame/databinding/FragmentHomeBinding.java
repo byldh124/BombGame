@@ -16,6 +16,7 @@ import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.gms.ads.AdView;
 import com.moondroid.bombgame.R;
 import com.moondroid.bombgame.presentation.view.home.HomeFragment;
+import com.moondroid.bombgame.utils.Constants;
 import java.lang.Deprecated;
 import java.lang.Object;
 
@@ -51,7 +52,7 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
   public final AppCompatTextView tvTitle;
 
   @Bindable
-  protected Integer mType;
+  protected Constants.GameType mType;
 
   @Bindable
   protected HomeFragment.GameStatus mStatus;
@@ -74,10 +75,10 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
     this.tvTitle = tvTitle;
   }
 
-  public abstract void setType(@Nullable Integer type);
+  public abstract void setType(@Nullable Constants.GameType type);
 
   @Nullable
-  public Integer getType() {
+  public Constants.GameType getType() {
     return mType;
   }
 

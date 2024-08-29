@@ -14,11 +14,11 @@ public class FragmentSettingBindingImpl extends FragmentSettingBinding implement
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.toolbar, 10);
-        sViewsWithIds.put(R.id.icBack, 11);
-        sViewsWithIds.put(R.id.gameWrapper, 12);
-        sViewsWithIds.put(R.id.tvGame, 13);
-        sViewsWithIds.put(R.id.tvCharacter, 14);
+        sViewsWithIds.put(R.id.toolbar, 11);
+        sViewsWithIds.put(R.id.icBack, 12);
+        sViewsWithIds.put(R.id.gameWrapper, 13);
+        sViewsWithIds.put(R.id.tvGame, 14);
+        sViewsWithIds.put(R.id.tvCharacter, 15);
     }
     // views
     @NonNull
@@ -26,15 +26,17 @@ public class FragmentSettingBindingImpl extends FragmentSettingBinding implement
     @NonNull
     private final androidx.appcompat.widget.AppCompatCheckBox mboundView1;
     @NonNull
+    private final android.widget.FrameLayout mboundView10;
+    @NonNull
     private final androidx.appcompat.widget.AppCompatCheckBox mboundView2;
     @NonNull
     private final androidx.appcompat.widget.AppCompatCheckBox mboundView3;
     @NonNull
-    private final android.widget.FrameLayout mboundView5;
+    private final androidx.appcompat.widget.AppCompatCheckBox mboundView4;
     @NonNull
-    private final android.widget.FrameLayout mboundView7;
+    private final android.widget.FrameLayout mboundView6;
     @NonNull
-    private final android.widget.FrameLayout mboundView9;
+    private final android.widget.FrameLayout mboundView8;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback2;
@@ -48,20 +50,20 @@ public class FragmentSettingBindingImpl extends FragmentSettingBinding implement
     private androidx.databinding.InverseBindingListener mboundView1androidCheckedAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
-            // Inverse of model.game01.getValue()
-            //         is model.game01.setValue((java.lang.Boolean) callbackArg_0)
+            // Inverse of model.initial.getValue()
+            //         is model.initial.setValue((java.lang.Boolean) callbackArg_0)
             boolean callbackArg_0 = mboundView1.isChecked();
             // localize variables for thread safety
             // model
             com.moondroid.bombgame.presentation.view.setting.SettingViewModel model = mModel;
+            // model.initial
+            androidx.lifecycle.MutableLiveData<java.lang.Boolean> modelInitial = null;
+            // model.initial.getValue()
+            java.lang.Boolean modelInitialGetValue = null;
             // model != null
             boolean modelJavaLangObjectNull = false;
-            // model.game01
-            androidx.lifecycle.MutableLiveData<java.lang.Boolean> modelGame01 = null;
-            // model.game01.getValue()
-            java.lang.Boolean modelGame01GetValue = null;
-            // model.game01 != null
-            boolean modelGame01JavaLangObjectNull = false;
+            // model.initial != null
+            boolean modelInitialJavaLangObjectNull = false;
 
 
 
@@ -69,15 +71,15 @@ public class FragmentSettingBindingImpl extends FragmentSettingBinding implement
             if (modelJavaLangObjectNull) {
 
 
-                modelGame01 = model.getGame01();
+                modelInitial = model.getInitial();
 
-                modelGame01JavaLangObjectNull = (modelGame01) != (null);
-                if (modelGame01JavaLangObjectNull) {
-
-
+                modelInitialJavaLangObjectNull = (modelInitial) != (null);
+                if (modelInitialJavaLangObjectNull) {
 
 
-                    modelGame01.setValue(((java.lang.Boolean) (callbackArg_0)));
+
+
+                    modelInitial.setValue(((java.lang.Boolean) (callbackArg_0)));
                 }
             }
         }
@@ -85,20 +87,20 @@ public class FragmentSettingBindingImpl extends FragmentSettingBinding implement
     private androidx.databinding.InverseBindingListener mboundView2androidCheckedAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
-            // Inverse of model.game02.getValue()
-            //         is model.game02.setValue((java.lang.Boolean) callbackArg_0)
+            // Inverse of model.association.getValue()
+            //         is model.association.setValue((java.lang.Boolean) callbackArg_0)
             boolean callbackArg_0 = mboundView2.isChecked();
             // localize variables for thread safety
             // model
             com.moondroid.bombgame.presentation.view.setting.SettingViewModel model = mModel;
             // model != null
             boolean modelJavaLangObjectNull = false;
-            // model.game02.getValue()
-            java.lang.Boolean modelGame02GetValue = null;
-            // model.game02
-            androidx.lifecycle.MutableLiveData<java.lang.Boolean> modelGame02 = null;
-            // model.game02 != null
-            boolean modelGame02JavaLangObjectNull = false;
+            // model.association != null
+            boolean modelAssociationJavaLangObjectNull = false;
+            // model.association
+            androidx.lifecycle.MutableLiveData<java.lang.Boolean> modelAssociation = null;
+            // model.association.getValue()
+            java.lang.Boolean modelAssociationGetValue = null;
 
 
 
@@ -106,15 +108,15 @@ public class FragmentSettingBindingImpl extends FragmentSettingBinding implement
             if (modelJavaLangObjectNull) {
 
 
-                modelGame02 = model.getGame02();
+                modelAssociation = model.getAssociation();
 
-                modelGame02JavaLangObjectNull = (modelGame02) != (null);
-                if (modelGame02JavaLangObjectNull) {
-
-
+                modelAssociationJavaLangObjectNull = (modelAssociation) != (null);
+                if (modelAssociationJavaLangObjectNull) {
 
 
-                    modelGame02.setValue(((java.lang.Boolean) (callbackArg_0)));
+
+
+                    modelAssociation.setValue(((java.lang.Boolean) (callbackArg_0)));
                 }
             }
         }
@@ -122,20 +124,20 @@ public class FragmentSettingBindingImpl extends FragmentSettingBinding implement
     private androidx.databinding.InverseBindingListener mboundView3androidCheckedAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
-            // Inverse of model.game03.getValue()
-            //         is model.game03.setValue((java.lang.Boolean) callbackArg_0)
+            // Inverse of model.question.getValue()
+            //         is model.question.setValue((java.lang.Boolean) callbackArg_0)
             boolean callbackArg_0 = mboundView3.isChecked();
             // localize variables for thread safety
             // model
             com.moondroid.bombgame.presentation.view.setting.SettingViewModel model = mModel;
+            // model.question
+            androidx.lifecycle.MutableLiveData<java.lang.Boolean> modelQuestion = null;
             // model != null
             boolean modelJavaLangObjectNull = false;
-            // model.game03
-            androidx.lifecycle.MutableLiveData<java.lang.Boolean> modelGame03 = null;
-            // model.game03.getValue()
-            java.lang.Boolean modelGame03GetValue = null;
-            // model.game03 != null
-            boolean modelGame03JavaLangObjectNull = false;
+            // model.question != null
+            boolean modelQuestionJavaLangObjectNull = false;
+            // model.question.getValue()
+            java.lang.Boolean modelQuestionGetValue = null;
 
 
 
@@ -143,33 +145,70 @@ public class FragmentSettingBindingImpl extends FragmentSettingBinding implement
             if (modelJavaLangObjectNull) {
 
 
-                modelGame03 = model.getGame03();
+                modelQuestion = model.getQuestion();
 
-                modelGame03JavaLangObjectNull = (modelGame03) != (null);
-                if (modelGame03JavaLangObjectNull) {
-
-
+                modelQuestionJavaLangObjectNull = (modelQuestion) != (null);
+                if (modelQuestionJavaLangObjectNull) {
 
 
-                    modelGame03.setValue(((java.lang.Boolean) (callbackArg_0)));
+
+
+                    modelQuestion.setValue(((java.lang.Boolean) (callbackArg_0)));
+                }
+            }
+        }
+    };
+    private androidx.databinding.InverseBindingListener mboundView4androidCheckedAttrChanged = new androidx.databinding.InverseBindingListener() {
+        @Override
+        public void onChange() {
+            // Inverse of model.lastWord.getValue()
+            //         is model.lastWord.setValue((java.lang.Boolean) callbackArg_0)
+            boolean callbackArg_0 = mboundView4.isChecked();
+            // localize variables for thread safety
+            // model
+            com.moondroid.bombgame.presentation.view.setting.SettingViewModel model = mModel;
+            // model.lastWord != null
+            boolean modelLastWordJavaLangObjectNull = false;
+            // model.lastWord
+            androidx.lifecycle.MutableLiveData<java.lang.Boolean> modelLastWord = null;
+            // model != null
+            boolean modelJavaLangObjectNull = false;
+            // model.lastWord.getValue()
+            java.lang.Boolean modelLastWordGetValue = null;
+
+
+
+            modelJavaLangObjectNull = (model) != (null);
+            if (modelJavaLangObjectNull) {
+
+
+                modelLastWord = model.getLastWord();
+
+                modelLastWordJavaLangObjectNull = (modelLastWord) != (null);
+                if (modelLastWordJavaLangObjectNull) {
+
+
+
+
+                    modelLastWord.setValue(((java.lang.Boolean) (callbackArg_0)));
                 }
             }
         }
     };
 
     public FragmentSettingBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 15, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 16, sIncludes, sViewsWithIds));
     }
     private FragmentSettingBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 4
-            , (androidx.appcompat.widget.LinearLayoutCompat) bindings[12]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[11]
-            , (com.airbnb.lottie.LottieAnimationView) bindings[4]
-            , (com.airbnb.lottie.LottieAnimationView) bindings[6]
-            , (com.airbnb.lottie.LottieAnimationView) bindings[8]
-            , (com.google.android.material.appbar.MaterialToolbar) bindings[10]
+        super(bindingComponent, root, 5
+            , (androidx.appcompat.widget.LinearLayoutCompat) bindings[13]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[12]
+            , (com.airbnb.lottie.LottieAnimationView) bindings[5]
+            , (com.airbnb.lottie.LottieAnimationView) bindings[7]
+            , (com.airbnb.lottie.LottieAnimationView) bindings[9]
+            , (com.google.android.material.appbar.MaterialToolbar) bindings[11]
+            , (androidx.appcompat.widget.AppCompatTextView) bindings[15]
             , (androidx.appcompat.widget.AppCompatTextView) bindings[14]
-            , (androidx.appcompat.widget.AppCompatTextView) bindings[13]
             );
         this.lottieChar01.setTag(null);
         this.lottieChar02.setTag(null);
@@ -178,16 +217,18 @@ public class FragmentSettingBindingImpl extends FragmentSettingBinding implement
         this.mboundView0.setTag(null);
         this.mboundView1 = (androidx.appcompat.widget.AppCompatCheckBox) bindings[1];
         this.mboundView1.setTag(null);
+        this.mboundView10 = (android.widget.FrameLayout) bindings[10];
+        this.mboundView10.setTag(null);
         this.mboundView2 = (androidx.appcompat.widget.AppCompatCheckBox) bindings[2];
         this.mboundView2.setTag(null);
         this.mboundView3 = (androidx.appcompat.widget.AppCompatCheckBox) bindings[3];
         this.mboundView3.setTag(null);
-        this.mboundView5 = (android.widget.FrameLayout) bindings[5];
-        this.mboundView5.setTag(null);
-        this.mboundView7 = (android.widget.FrameLayout) bindings[7];
-        this.mboundView7.setTag(null);
-        this.mboundView9 = (android.widget.FrameLayout) bindings[9];
-        this.mboundView9.setTag(null);
+        this.mboundView4 = (androidx.appcompat.widget.AppCompatCheckBox) bindings[4];
+        this.mboundView4.setTag(null);
+        this.mboundView6 = (android.widget.FrameLayout) bindings[6];
+        this.mboundView6.setTag(null);
+        this.mboundView8 = (android.widget.FrameLayout) bindings[8];
+        this.mboundView8.setTag(null);
         setRootTag(root);
         // listeners
         mCallback2 = new com.moondroid.bombgame.generated.callback.OnClickListener(this, 2);
@@ -199,7 +240,7 @@ public class FragmentSettingBindingImpl extends FragmentSettingBinding implement
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x20L;
+                mDirtyFlags = 0x40L;
         }
         requestRebind();
     }
@@ -229,7 +270,7 @@ public class FragmentSettingBindingImpl extends FragmentSettingBinding implement
     public void setModel(@Nullable com.moondroid.bombgame.presentation.view.setting.SettingViewModel Model) {
         this.mModel = Model;
         synchronized(this) {
-            mDirtyFlags |= 0x10L;
+            mDirtyFlags |= 0x20L;
         }
         notifyPropertyChanged(BR.model);
         super.requestRebind();
@@ -239,17 +280,19 @@ public class FragmentSettingBindingImpl extends FragmentSettingBinding implement
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeModelCharIndex((androidx.lifecycle.MutableLiveData<java.lang.Integer>) object, fieldId);
+                return onChangeModelInitial((androidx.lifecycle.MutableLiveData<java.lang.Boolean>) object, fieldId);
             case 1 :
-                return onChangeModelGame03((androidx.lifecycle.MutableLiveData<java.lang.Boolean>) object, fieldId);
+                return onChangeModelCharIndex((androidx.lifecycle.MutableLiveData<java.lang.Integer>) object, fieldId);
             case 2 :
-                return onChangeModelGame02((androidx.lifecycle.MutableLiveData<java.lang.Boolean>) object, fieldId);
+                return onChangeModelQuestion((androidx.lifecycle.MutableLiveData<java.lang.Boolean>) object, fieldId);
             case 3 :
-                return onChangeModelGame01((androidx.lifecycle.MutableLiveData<java.lang.Boolean>) object, fieldId);
+                return onChangeModelAssociation((androidx.lifecycle.MutableLiveData<java.lang.Boolean>) object, fieldId);
+            case 4 :
+                return onChangeModelLastWord((androidx.lifecycle.MutableLiveData<java.lang.Boolean>) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeModelCharIndex(androidx.lifecycle.MutableLiveData<java.lang.Integer> ModelCharIndex, int fieldId) {
+    private boolean onChangeModelInitial(androidx.lifecycle.MutableLiveData<java.lang.Boolean> ModelInitial, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
@@ -258,7 +301,7 @@ public class FragmentSettingBindingImpl extends FragmentSettingBinding implement
         }
         return false;
     }
-    private boolean onChangeModelGame03(androidx.lifecycle.MutableLiveData<java.lang.Boolean> ModelGame03, int fieldId) {
+    private boolean onChangeModelCharIndex(androidx.lifecycle.MutableLiveData<java.lang.Integer> ModelCharIndex, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
@@ -267,7 +310,7 @@ public class FragmentSettingBindingImpl extends FragmentSettingBinding implement
         }
         return false;
     }
-    private boolean onChangeModelGame02(androidx.lifecycle.MutableLiveData<java.lang.Boolean> ModelGame02, int fieldId) {
+    private boolean onChangeModelQuestion(androidx.lifecycle.MutableLiveData<java.lang.Boolean> ModelQuestion, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x4L;
@@ -276,10 +319,19 @@ public class FragmentSettingBindingImpl extends FragmentSettingBinding implement
         }
         return false;
     }
-    private boolean onChangeModelGame01(androidx.lifecycle.MutableLiveData<java.lang.Boolean> ModelGame01, int fieldId) {
+    private boolean onChangeModelAssociation(androidx.lifecycle.MutableLiveData<java.lang.Boolean> ModelAssociation, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x8L;
+            }
+            return true;
+        }
+        return false;
+    }
+    private boolean onChangeModelLastWord(androidx.lifecycle.MutableLiveData<java.lang.Boolean> ModelLastWord, int fieldId) {
+        if (fieldId == BR._all) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x10L;
             }
             return true;
         }
@@ -294,32 +346,53 @@ public class FragmentSettingBindingImpl extends FragmentSettingBinding implement
             mDirtyFlags = 0;
         }
         com.moondroid.bombgame.presentation.view.setting.SettingViewModel model = mModel;
-        boolean androidxDatabindingViewDataBindingSafeUnboxModelGame01GetValue = false;
-        boolean androidxDatabindingViewDataBindingSafeUnboxModelGame02GetValue = false;
-        boolean androidxDatabindingViewDataBindingSafeUnboxModelGame03GetValue = false;
-        java.lang.Boolean modelGame03GetValue = null;
+        boolean androidxDatabindingViewDataBindingSafeUnboxModelAssociationGetValue = false;
+        androidx.lifecycle.MutableLiveData<java.lang.Boolean> modelInitial = null;
+        java.lang.Boolean modelInitialGetValue = null;
         java.lang.Integer modelCharIndexGetValue = null;
         boolean modelCharIndexInt1 = false;
         boolean modelCharIndexInt3 = false;
+        java.lang.Boolean modelQuestionGetValue = null;
+        java.lang.Boolean modelAssociationGetValue = null;
         androidx.lifecycle.MutableLiveData<java.lang.Integer> modelCharIndex = null;
-        java.lang.Boolean modelGame02GetValue = null;
+        boolean androidxDatabindingViewDataBindingSafeUnboxModelLastWordGetValue = false;
+        androidx.lifecycle.MutableLiveData<java.lang.Boolean> modelQuestion = null;
+        boolean androidxDatabindingViewDataBindingSafeUnboxModelQuestionGetValue = false;
         int androidxDatabindingViewDataBindingSafeUnboxModelCharIndexGetValue = 0;
-        androidx.lifecycle.MutableLiveData<java.lang.Boolean> modelGame03 = null;
-        androidx.lifecycle.MutableLiveData<java.lang.Boolean> modelGame02 = null;
+        androidx.lifecycle.MutableLiveData<java.lang.Boolean> modelAssociation = null;
+        java.lang.Boolean modelLastWordGetValue = null;
+        androidx.lifecycle.MutableLiveData<java.lang.Boolean> modelLastWord = null;
+        boolean androidxDatabindingViewDataBindingSafeUnboxModelInitialGetValue = false;
         boolean modelCharIndexInt2 = false;
-        androidx.lifecycle.MutableLiveData<java.lang.Boolean> modelGame01 = null;
-        java.lang.Boolean modelGame01GetValue = null;
 
-        if ((dirtyFlags & 0x3fL) != 0) {
+        if ((dirtyFlags & 0x7fL) != 0) {
 
 
-            if ((dirtyFlags & 0x31L) != 0) {
+            if ((dirtyFlags & 0x61L) != 0) {
+
+                    if (model != null) {
+                        // read model.initial
+                        modelInitial = model.getInitial();
+                    }
+                    updateLiveDataRegistration(0, modelInitial);
+
+
+                    if (modelInitial != null) {
+                        // read model.initial.getValue()
+                        modelInitialGetValue = modelInitial.getValue();
+                    }
+
+
+                    // read androidx.databinding.ViewDataBinding.safeUnbox(model.initial.getValue())
+                    androidxDatabindingViewDataBindingSafeUnboxModelInitialGetValue = androidx.databinding.ViewDataBinding.safeUnbox(modelInitialGetValue);
+            }
+            if ((dirtyFlags & 0x62L) != 0) {
 
                     if (model != null) {
                         // read model.charIndex
                         modelCharIndex = model.getCharIndex();
                     }
-                    updateLiveDataRegistration(0, modelCharIndex);
+                    updateLiveDataRegistration(1, modelCharIndex);
 
 
                     if (modelCharIndex != null) {
@@ -339,73 +412,73 @@ public class FragmentSettingBindingImpl extends FragmentSettingBinding implement
                     // read androidx.databinding.ViewDataBinding.safeUnbox(model.charIndex.getValue()) == 2
                     modelCharIndexInt2 = (androidxDatabindingViewDataBindingSafeUnboxModelCharIndexGetValue) == (2);
             }
-            if ((dirtyFlags & 0x32L) != 0) {
+            if ((dirtyFlags & 0x64L) != 0) {
 
                     if (model != null) {
-                        // read model.game03
-                        modelGame03 = model.getGame03();
+                        // read model.question
+                        modelQuestion = model.getQuestion();
                     }
-                    updateLiveDataRegistration(1, modelGame03);
+                    updateLiveDataRegistration(2, modelQuestion);
 
 
-                    if (modelGame03 != null) {
-                        // read model.game03.getValue()
-                        modelGame03GetValue = modelGame03.getValue();
+                    if (modelQuestion != null) {
+                        // read model.question.getValue()
+                        modelQuestionGetValue = modelQuestion.getValue();
                     }
 
 
-                    // read androidx.databinding.ViewDataBinding.safeUnbox(model.game03.getValue())
-                    androidxDatabindingViewDataBindingSafeUnboxModelGame03GetValue = androidx.databinding.ViewDataBinding.safeUnbox(modelGame03GetValue);
+                    // read androidx.databinding.ViewDataBinding.safeUnbox(model.question.getValue())
+                    androidxDatabindingViewDataBindingSafeUnboxModelQuestionGetValue = androidx.databinding.ViewDataBinding.safeUnbox(modelQuestionGetValue);
             }
-            if ((dirtyFlags & 0x34L) != 0) {
+            if ((dirtyFlags & 0x68L) != 0) {
 
                     if (model != null) {
-                        // read model.game02
-                        modelGame02 = model.getGame02();
+                        // read model.association
+                        modelAssociation = model.getAssociation();
                     }
-                    updateLiveDataRegistration(2, modelGame02);
+                    updateLiveDataRegistration(3, modelAssociation);
 
 
-                    if (modelGame02 != null) {
-                        // read model.game02.getValue()
-                        modelGame02GetValue = modelGame02.getValue();
+                    if (modelAssociation != null) {
+                        // read model.association.getValue()
+                        modelAssociationGetValue = modelAssociation.getValue();
                     }
 
 
-                    // read androidx.databinding.ViewDataBinding.safeUnbox(model.game02.getValue())
-                    androidxDatabindingViewDataBindingSafeUnboxModelGame02GetValue = androidx.databinding.ViewDataBinding.safeUnbox(modelGame02GetValue);
+                    // read androidx.databinding.ViewDataBinding.safeUnbox(model.association.getValue())
+                    androidxDatabindingViewDataBindingSafeUnboxModelAssociationGetValue = androidx.databinding.ViewDataBinding.safeUnbox(modelAssociationGetValue);
             }
-            if ((dirtyFlags & 0x38L) != 0) {
+            if ((dirtyFlags & 0x70L) != 0) {
 
                     if (model != null) {
-                        // read model.game01
-                        modelGame01 = model.getGame01();
+                        // read model.lastWord
+                        modelLastWord = model.getLastWord();
                     }
-                    updateLiveDataRegistration(3, modelGame01);
+                    updateLiveDataRegistration(4, modelLastWord);
 
 
-                    if (modelGame01 != null) {
-                        // read model.game01.getValue()
-                        modelGame01GetValue = modelGame01.getValue();
+                    if (modelLastWord != null) {
+                        // read model.lastWord.getValue()
+                        modelLastWordGetValue = modelLastWord.getValue();
                     }
 
 
-                    // read androidx.databinding.ViewDataBinding.safeUnbox(model.game01.getValue())
-                    androidxDatabindingViewDataBindingSafeUnboxModelGame01GetValue = androidx.databinding.ViewDataBinding.safeUnbox(modelGame01GetValue);
+                    // read androidx.databinding.ViewDataBinding.safeUnbox(model.lastWord.getValue())
+                    androidxDatabindingViewDataBindingSafeUnboxModelLastWordGetValue = androidx.databinding.ViewDataBinding.safeUnbox(modelLastWordGetValue);
             }
         }
         // batch finished
-        if ((dirtyFlags & 0x31L) != 0) {
+        if ((dirtyFlags & 0x62L) != 0) {
             // api target 1
 
             com.moondroid.bombgame.presentation.common.BindingAdapter.playAnim(this.lottieChar01, modelCharIndexInt1);
             com.moondroid.bombgame.presentation.common.BindingAdapter.playAnim(this.lottieChar02, modelCharIndexInt2);
             com.moondroid.bombgame.presentation.common.BindingAdapter.playAnim(this.lottieChar03, modelCharIndexInt3);
-            com.moondroid.bombgame.presentation.common.BindingAdapter.setVisible(this.mboundView5, modelCharIndexInt1);
-            com.moondroid.bombgame.presentation.common.BindingAdapter.setVisible(this.mboundView7, modelCharIndexInt2);
-            com.moondroid.bombgame.presentation.common.BindingAdapter.setVisible(this.mboundView9, modelCharIndexInt3);
+            com.moondroid.bombgame.presentation.common.BindingAdapter.setVisible(this.mboundView10, modelCharIndexInt3);
+            com.moondroid.bombgame.presentation.common.BindingAdapter.setVisible(this.mboundView6, modelCharIndexInt1);
+            com.moondroid.bombgame.presentation.common.BindingAdapter.setVisible(this.mboundView8, modelCharIndexInt2);
         }
-        if ((dirtyFlags & 0x20L) != 0) {
+        if ((dirtyFlags & 0x40L) != 0) {
             // api target 1
 
             this.lottieChar01.setOnClickListener(mCallback1);
@@ -414,21 +487,27 @@ public class FragmentSettingBindingImpl extends FragmentSettingBinding implement
             androidx.databinding.adapters.CompoundButtonBindingAdapter.setListeners(this.mboundView1, (android.widget.CompoundButton.OnCheckedChangeListener)null, mboundView1androidCheckedAttrChanged);
             androidx.databinding.adapters.CompoundButtonBindingAdapter.setListeners(this.mboundView2, (android.widget.CompoundButton.OnCheckedChangeListener)null, mboundView2androidCheckedAttrChanged);
             androidx.databinding.adapters.CompoundButtonBindingAdapter.setListeners(this.mboundView3, (android.widget.CompoundButton.OnCheckedChangeListener)null, mboundView3androidCheckedAttrChanged);
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setListeners(this.mboundView4, (android.widget.CompoundButton.OnCheckedChangeListener)null, mboundView4androidCheckedAttrChanged);
         }
-        if ((dirtyFlags & 0x38L) != 0) {
+        if ((dirtyFlags & 0x61L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.mboundView1, androidxDatabindingViewDataBindingSafeUnboxModelGame01GetValue);
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.mboundView1, androidxDatabindingViewDataBindingSafeUnboxModelInitialGetValue);
         }
-        if ((dirtyFlags & 0x34L) != 0) {
+        if ((dirtyFlags & 0x68L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.mboundView2, androidxDatabindingViewDataBindingSafeUnboxModelGame02GetValue);
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.mboundView2, androidxDatabindingViewDataBindingSafeUnboxModelAssociationGetValue);
         }
-        if ((dirtyFlags & 0x32L) != 0) {
+        if ((dirtyFlags & 0x64L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.mboundView3, androidxDatabindingViewDataBindingSafeUnboxModelGame03GetValue);
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.mboundView3, androidxDatabindingViewDataBindingSafeUnboxModelQuestionGetValue);
+        }
+        if ((dirtyFlags & 0x70L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.mboundView4, androidxDatabindingViewDataBindingSafeUnboxModelLastWordGetValue);
         }
     }
     // Listener Stub Implementations
@@ -494,12 +573,13 @@ public class FragmentSettingBindingImpl extends FragmentSettingBinding implement
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): model.charIndex
-        flag 1 (0x2L): model.game03
-        flag 2 (0x3L): model.game02
-        flag 3 (0x4L): model.game01
-        flag 4 (0x5L): model
-        flag 5 (0x6L): null
+        flag 0 (0x1L): model.initial
+        flag 1 (0x2L): model.charIndex
+        flag 2 (0x3L): model.question
+        flag 3 (0x4L): model.association
+        flag 4 (0x5L): model.lastWord
+        flag 5 (0x6L): model
+        flag 6 (0x7L): null
     flag mapping end*/
     //end
 }

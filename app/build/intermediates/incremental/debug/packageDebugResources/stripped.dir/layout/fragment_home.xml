@@ -5,7 +5,7 @@
 
                  
                        
-                             
+                                                                     
 
                  
                          
@@ -53,7 +53,7 @@
                 android:id="@+id/tvQuiz"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/font_ex"
+                android:fontFamily="@font/nanum_square_round_eb"
                               
                 android:gravity="center"
                 android:textAlignment="center"

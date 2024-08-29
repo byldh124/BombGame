@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.moondroid.bombgame.app-mergeDebugResources-67:/values-v24/values-v24.xml",
+            "outputFile": "com.moondroid.bombgame.app-mergeDebugResources-69:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/sehan/.gradle/caches/transforms-3/8d30766b6ebb3d42f1e83acf0a77dcfc/transformed/appcompat-1.6.1/res/values-v24/values-v24.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,212",
-                        "endColumns": "156,134",
-                        "endOffsets": "207,342"
-                    }
-                },
-                {
-                    "source": "/Users/sehan/.gradle/caches/transforms-3/9ad8201b7a81c1e4f8e4841fa43e284c/transformed/material-1.11.0/res/values-v24/values-v24.xml",
+                    "source": "/Users/sehan/.gradle/caches/transforms-3/234abe7bd61c78dafbfb9c6957794b27/transformed/material-1.12.0/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,9,12,15",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -30,6 +20,16 @@
                         "endLines": "4,5,6,7,10,13,16,19",
                         "endColumns": "84,98,86,100,10,10,10,10",
                         "endOffsets": "427,526,613,714,913,1126,1327,1542"
+                    }
+                },
+                {
+                    "source": "/Users/sehan/.gradle/caches/transforms-3/90ba744095bebc0a80d7a29b2c4e4e45/transformed/appcompat-1.7.0/res/values-v24/values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
                     }
                 }
             ]

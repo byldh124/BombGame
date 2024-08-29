@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools">
-    <string-array name="game01">
-        <item>ㄱ</item>
-        <item>ㄴ</item>
-        <item>ㄷ</item>
-        <item>ㄹ</item>
-        <item>ㅁ</item>
-        <item>ㅂ</item>
-        <item>ㅅ</item>
-        <item>ㅇ</item>
-        <item>ㅈ</item>
-        <item>ㅊ</item>
-        <item>ㅋ</item>
-        <item>ㅌ</item>
-        <item>ㅍ</item>
-        <item>ㅎ</item>
-    </string-array>
-    <string-array name="game02">
+    <string-array name="game_association">
         <item>동물</item>
-        <item>가전 제품</item>
         <item>남자 솔로 가수</item>
         <item>여자 솔로 가수</item>
         <item>남자 아이돌</item>
@@ -32,18 +15,45 @@
         <item>외국 드라마</item>
         <item>나라 이름</item>
     </string-array>
-    <string-array name="game03">
+    <string-array name="game_initial">
+        <item>ㄱ</item>
+        <item>ㄴ</item>
+        <item>ㄷ</item>
+        <item>ㄹ</item>
+        <item>ㅁ</item>
+        <item>ㅂ</item>
+        <item>ㅅ</item>
+        <item>ㅇ</item>
+        <item>ㅈ</item>
+    </string-array>
+    <string-array name="game_last_word">
+        <item>~형</item>
+        <item>~파</item>
+        <item>~지</item>
+        <item>~수</item>
+        <item>~대</item>
+        <item>~인</item>
+        <item>~나</item>
+        <item>~비</item>
+        <item>~증</item>
+        <item>~병</item>
+        <item>~도</item>
+        <item>~장</item>
+        <item>~인</item>
+        <item>~수</item>
+        <item>~츄</item>
+        <item>~기</item>
+    </string-array>
+    <string-array name="game_question">
         <item>가장 자신 있는 외모 부위는?</item>
         <item>좋아 하는 가수는?</item>
         <item>가장 최근에 본 영화는?</item>
         <item>강아지 vs 고양이</item>
         <item>짜장면 vs 짬뽕</item>
         <item>가장 좋았던 여행 장소는?</item>
-        <item>나랑 닮은 유명인은?</item>
         <item>후라이드 치킨 vs 양념 치킨</item>
         <item>지금 가장 먹고 싶은 것은?</item>
-        <item>지금 여기에서 가장 친해지고 싶은 사람은?</item>
-        <item>좋아하는 영화 대사 성대모사로 말하기</item>
+        <item>가장 재밌었던 영화는?</item>
         <item>산 vs 바다</item>
         <item>당신의 이상형은?</item>
     </string-array>
@@ -54,6 +64,7 @@
     <color name="blue_light02">#457AB5</color>
     <color name="defaultText">#1f1f1f</color>
     <color name="defaultText_white">#f2f2f2</color>
+    <color name="dialog">#88000000</color>
     <color name="gray_light01">#858585</color>
     <color name="gray_light02">#737373</color>
     <color name="ic_launcher_background">#FFFFFF</color>
@@ -70,12 +81,14 @@
     <string name="cmn_continue_game">게임 계속하기</string>
     <string name="cmn_desc_association">제시어를 보고 연상 되는 단어를 말해 보세요.</string>
     <string name="cmn_desc_initial">다음 초성을 보고 단어를 만들어 보세요.</string>
+    <string name="cmn_desc_last_word">다음 낱말로 끝나는 단어를 말해 보세요.</string>
     <string name="cmn_desc_questIon">질문에 답하고 옆 사람에게 다른 질문을 해 보세요.</string>
-    <string name="cmn_exit">나기기</string>
+    <string name="cmn_exit">나가기</string>
     <string name="cmn_game_rules">게임 방법</string>
     <string name="cmn_game_setting">게임 설정</string>
     <string name="cmn_game_type">게임 종류</string>
     <string name="cmn_initial_game">초성 게임</string>
+    <string name="cmn_last_word_game">끝말 게임</string>
     <string name="cmn_player_number">적정 인원</string>
     <string name="cmn_question_game">질문 게임</string>
     <string name="cmn_retry">다시하기</string>
@@ -88,13 +101,15 @@
     <string name="description_association_game">- 제시어를 보고 연상 되는 단어를 말해 보세요.\n- 먼저 나온 단어들은 사용할 수 없습니다.</string>
     <string name="description_game_rules">화면에 나온 게임에 대한 알맞은 답을 말하고 폭탄이 터지기 전에 옆사람에게 폭탄을 넘기세요!\n\n폭탄은 20초에서 1분 사이에 언제 터질지 모릅니다. 그러니 서둘러서 옆사람에게 전달해주세요.\n\n폭탄을 넘기는 도중에 폭탄이 터지면 받는 쪽 사람이 폭탄을 갖고 있는 것으로 간주합니다.\n\n폭탄이 터질때 폭탄을 갖고 있던 사람이 정해진 벌칙을 수행합니다.\n\n재미있는 게임 진행을 위해 사운드를 켜주세요.</string>
     <string name="description_initial_game">- 2개의 초성으로 시작하는 단어를 완성해주세요.\n- 먼저 나온 단어들은 사용할 수 없습니다.</string>
+    <string name="description_last_word_game">- 화면에 나오는 낱말로 끝나는 단어를 만들어주세요.</string>
     <string name="description_player_number">3명 - 12명</string>
     <string name="description_plz_update">새로운 버전이 나왔습니다.\n플레이 스토어에서 업데이트 해주세요.</string>
     <string name="description_press_back_once_more">뒤로가기를 한번 더 누르시면 종료됩니다.</string>
-    <string name="description_question_game">- 첫 질문에 대답한 뒤 옆사람에게 다른 질문을 해보세요.</string>
+    <string name="description_question_game">- 질문에 대답한 뒤 옆사람에게 다른 질문을 해보세요.</string>
     <string name="description_version_not_exist">해당 버전은 존재하지 않습니다.</string>
     <string name="example_association_game"><![CDATA[예) 나라 이름 -> 한국, 미국 ..]]></string>
     <string name="example_initial_game"><![CDATA[예) ㄴㅁ -> 나무, 남매 ..]]></string>
+    <string name="example_last_word_game"><![CDATA[예) ~도 -> 은장도, 제주도 ..]]></string>
     <string name="example_question_game">예) 가장 좋아하는 동물, 가장 좋아하는 음식</string>
     <string name="foreground_id" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
     <string name="gcm_defaultSenderId" translatable="false">239882554238</string>
@@ -117,9 +132,10 @@
         <item name="android:background">@drawable/button_orange01</item>
     </style>
     <style name="DialogTheme">
-        <item name="android:windowFullscreen">true</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowBackground">@color/dialog</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
     </style>
     <style name="MyButton">
         <item name="android:fontFamily">@font/font_ex</item>

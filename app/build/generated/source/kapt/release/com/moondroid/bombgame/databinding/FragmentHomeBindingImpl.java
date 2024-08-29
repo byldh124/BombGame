@@ -81,7 +81,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
             setStatus((com.moondroid.bombgame.presentation.view.home.HomeFragment.GameStatus) variable);
         }
         else if (BR.type == variableId) {
-            setType((java.lang.Integer) variable);
+            setType((com.moondroid.bombgame.utils.Constants.GameType) variable);
         }
         else {
             variableSet = false;
@@ -97,7 +97,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
         notifyPropertyChanged(BR.status);
         super.requestRebind();
     }
-    public void setType(@Nullable java.lang.Integer Type) {
+    public void setType(@Nullable com.moondroid.bombgame.utils.Constants.GameType Type) {
         this.mType = Type;
         synchronized(this) {
             mDirtyFlags |= 0x2L;
@@ -123,9 +123,8 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
         com.moondroid.bombgame.presentation.view.home.HomeFragment.GameStatus status = mStatus;
         boolean statusGameStatusBOMB = false;
         boolean statusGameStatusEXPLOSION = false;
-        java.lang.Integer type = mType;
+        com.moondroid.bombgame.utils.Constants.GameType type = mType;
         boolean statusGameStatusBOMBBooleanTrueStatusGameStatusEXPLOSION = false;
-        int androidxDatabindingViewDataBindingSafeUnboxType = 0;
         boolean statusGameStatusCOUNT = false;
 
         if ((dirtyFlags & 0x5L) != 0) {
@@ -148,11 +147,6 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
             }
         }
         if ((dirtyFlags & 0x6L) != 0) {
-
-
-
-                // read androidx.databinding.ViewDataBinding.safeUnbox(type)
-                androidxDatabindingViewDataBindingSafeUnboxType = androidx.databinding.ViewDataBinding.safeUnbox(type);
         }
         // batch finished
 
@@ -173,9 +167,9 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
         if ((dirtyFlags & 0x6L) != 0) {
             // api target 1
 
-            com.moondroid.bombgame.presentation.common.BindingAdapter.setTypeDescription(this.tvDescript, androidxDatabindingViewDataBindingSafeUnboxType);
-            com.moondroid.bombgame.presentation.common.BindingAdapter.setTypeQuiz(this.tvQuiz, androidxDatabindingViewDataBindingSafeUnboxType);
-            com.moondroid.bombgame.presentation.common.BindingAdapter.setTypeTitle(this.tvTitle, androidxDatabindingViewDataBindingSafeUnboxType);
+            com.moondroid.bombgame.presentation.common.BindingAdapter.setTypeDescription(this.tvDescript, type);
+            com.moondroid.bombgame.presentation.common.BindingAdapter.setTypeQuiz(this.tvQuiz, type);
+            com.moondroid.bombgame.presentation.common.BindingAdapter.setTypeTitle(this.tvTitle, type);
         }
     }
     // Listener Stub Implementations

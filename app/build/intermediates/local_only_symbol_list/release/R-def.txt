@@ -1,9 +1,10 @@
 R_DEF: Internal format may change without notice
 local
 anim fade_in
-array game01
-array game02
-array game03
+array game_association
+array game_initial
+array game_last_word
+array game_question
 color black
 color blue_darK01
 color blue_darK02
@@ -11,6 +12,7 @@ color blue_light01
 color blue_light02
 color defaultText
 color defaultText_white
+color dialog
 color gray_light01
 color gray_light02
 color ic_launcher_background
@@ -102,12 +104,14 @@ string cmn_continue
 string cmn_continue_game
 string cmn_desc_association
 string cmn_desc_initial
+string cmn_desc_last_word
 string cmn_desc_questIon
 string cmn_exit
 string cmn_game_rules
 string cmn_game_setting
 string cmn_game_type
 string cmn_initial_game
+string cmn_last_word_game
 string cmn_player_number
 string cmn_question_game
 string cmn_retry
@@ -120,6 +124,7 @@ string desc_select_more_one_game
 string description_association_game
 string description_game_rules
 string description_initial_game
+string description_last_word_game
 string description_player_number
 string description_plz_update
 string description_press_back_once_more
@@ -127,6 +132,7 @@ string description_question_game
 string description_version_not_exist
 string example_association_game
 string example_initial_game
+string example_last_word_game
 string example_question_game
 string foreground_id
 string gcm_defaultSenderId

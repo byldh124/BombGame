@@ -101,6 +101,24 @@
                 android:layout_marginStart="8dp"
                 android:text="@string/example_question_game"/>
 
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextDescription"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/cmn_last_word_game"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextDescription"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/description_last_word_game"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextDescription"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/example_last_word_game"/>
+
 
             <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextTitle"

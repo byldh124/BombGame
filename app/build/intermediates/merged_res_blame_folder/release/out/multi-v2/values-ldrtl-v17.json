@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.moondroid.bombgame.app-mergeReleaseResources-62:/values-ldrtl-v17/values-ldrtl-v17.xml",
+            "outputFile": "com.moondroid.bombgame.app-mergeReleaseResources-69:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
-                    "source": "/Users/sehan/.gradle/caches/transforms-3/56b24d990d6153fd760430ddc36286df/transformed/material-1.9.0/res/values-ldrtl-v17/values-ldrtl-v17.xml",
+                    "source": "/Users/sehan/.gradle/caches/transforms-3/234abe7bd61c78dafbfb9c6957794b27/transformed/material-1.12.0/res/values-ldrtl-v17/values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

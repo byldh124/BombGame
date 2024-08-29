@@ -1,7 +1,6 @@
 package com.moondroid.bombgame.presentation.view
 
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CombinedVibration
 import android.os.VibrationEffect
@@ -9,20 +8,16 @@ import android.os.Vibrator
 import android.os.VibratorManager
 import android.view.WindowManager
 import androidx.activity.OnBackPressedCallback
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.FullScreenContentCallback
 import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
-import com.google.android.play.core.review.ReviewManager
 import com.google.android.play.core.review.ReviewManagerFactory
-import com.google.android.play.core.review.model.ReviewErrorCode
 import com.moondroid.bombgame.R
 import com.moondroid.bombgame.presentation.base.BaseFragment
-import com.moondroid.bombgame.presentation.view.home.HomeFragment
-import com.moondroid.bombgame.presentation.view.splash.SplashFragment
 import com.moondroid.bombgame.utils.Extension.debug
 import com.moondroid.bombgame.utils.Extension.logException
 import com.moondroid.bombgame.utils.Preferences
@@ -64,7 +59,10 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                 val vibrator = getSystemService(VibratorManager::class.java)
                 val vibrationEffect =
-                    VibrationEffect.createWaveform(VIBRATE_PATTERN, VibrationEffect.DEFAULT_AMPLITUDE)
+                    VibrationEffect.createWaveform(
+                        VIBRATE_PATTERN,
+                        VibrationEffect.DEFAULT_AMPLITUDE
+                    )
                 val combinedVibration = CombinedVibration.createParallel(vibrationEffect)
                 vibrator.vibrate(combinedVibration)
             } else {

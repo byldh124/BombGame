@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.moondroid.bombgame.app-mergeReleaseResources-62:/values-port/values-port.xml",
+            "outputFile": "com.moondroid.bombgame.app-mergeReleaseResources-69:/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "/Users/sehan/.gradle/caches/transforms-3/fb074006d2806f09af413b75499d6257/transformed/appcompat-1.6.1/res/values-port/values-port.xml",
+                    "source": "/Users/sehan/.gradle/caches/transforms-3/90ba744095bebc0a80d7a29b2c4e4e45/transformed/appcompat-1.7.0/res/values-port/values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
