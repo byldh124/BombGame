@@ -47,9 +47,10 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
 
             override fun onRetry() {
                 FBAnalyze.logEvent("RETRY")
-                mContext.showAd {
+                /*mContext.showAd {
                     setGame()
-                }
+                }*/
+                setGame()
             }
         })
     }

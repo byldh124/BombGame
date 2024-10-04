@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         }
     }
 
-    fun showAd(onFinished: () -> Unit) {
+    /*fun showAd(onFinished: () -> Unit) {
         try {
             InterstitialAd.load(
                 this,
@@ -110,7 +110,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         } catch (e: Exception) {
             e.logException()
         }
-    }
+    }*/
 
     fun requestReview() {
         try {
